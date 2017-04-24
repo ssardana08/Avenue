@@ -69,7 +69,43 @@ class Window(QtGui.QMainWindow):
 		checkBox.stateChanged.connect(self.enlarge_window) 
 
 
+		self.progress = QtGui.QProgressBar(self)
+		self.progress.setGeometry(200, 80, 250, 15)
+		self.btn = QtGui.QPushButton("Download", self)
+		self.btn.move(200,120)
+		self.btn.clicked.connect(self.download)
+
+		style = self.style().objectName()
+		# print(check)
+		# print(type(check))
+		self.styleChoice = QtGui.QLabel(style, self)
+
+		comboBox = QtGui.QComboBox(self)
+		comboBox.addItem("motif")
+		comboBox.addItem("Windows")
+		comboBox.addItem("cde")
+		comboBox.addItem("Plastique")
+		comboBox.addItem("Cleanlooks")
+		comboBox.addItem("gtk+")
+
+
+		comboBox.move(50, 250)
+		self.styleChoice.move(50, 150)
+		comboBox.activated[str].connect(self.style_choice)
+
+
 		self.show()
+
+	def style_choice(self, text):
+		self.styleChoice.setText(text)
+		QtGui.QApplication.setStyle(QtGui.QStyleFactory.create(text))
+
+
+	def download(self):
+		self.completed = 0
+		while self.completed < 100:
+			self.completed += 0.001
+			self.progress.setValue(self.completed)
 
 	def enlarge_window(self, state):
 		if state == QtCore.Qt.Checked:
