@@ -1,7 +1,7 @@
-import socket
- 
+import socket 
 def server():
-    host = "127.0.0.1"
+	
+    host = socket.gethostbyname(socket.gethostname())
     port = 5000
      
     mySocket = socket.socket()
