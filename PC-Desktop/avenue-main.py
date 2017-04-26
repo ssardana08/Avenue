@@ -25,7 +25,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(384, 360)
+        MainWindow.resize(316, 360)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.gridLayout = QtGui.QGridLayout(self.centralwidget)
@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
         self.label_2 = QtGui.QLabel(self.centralwidget)
         self.label_2.setMaximumSize(QtCore.QSize(100, 50))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(11)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -65,9 +65,9 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn1.sizePolicy().hasHeightForWidth())
         self.btn1.setSizePolicy(sizePolicy)
-        self.btn1.setMinimumSize(QtCore.QSize(138, 50))
+        self.btn1.setMinimumSize(QtCore.QSize(101, 34))
         font = QtGui.QFont()
-        font.setPointSize(20)
+        font.setPointSize(16)
         font.setBold(False)
         font.setWeight(50)
         self.btn1.setFont(font)
@@ -82,7 +82,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addLayout(self.gridLayout_3, 2, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 384, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 316, 25))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
@@ -95,7 +95,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Avenue", None))
         self.btn2.setText(_translate("MainWindow", "Settings", None))
-        self.label_2.setText(_translate("MainWindow", "I.P Address", None))
+        self.label_2.setText(_translate("MainWindow", "IP Address", None))
         self.btn1.setText(_translate("MainWindow", "Start", None))
 
 
