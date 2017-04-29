@@ -3,7 +3,7 @@ def server():
 	
     host = socket.gethostbyname(socket.gethostname())
     port = 5000
-     
+     print("Server's IP Address:"+host)
     mySocket = socket.socket()
     mySocket.bind((host,port))
      
