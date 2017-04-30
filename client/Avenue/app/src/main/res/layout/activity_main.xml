@@ -5,61 +5,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.avenue.avenue.MainActivity">
-
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-      />
-
-    <Button
-        android:id="@+id/d"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/c"
-        android:layout_alignBottom="@+id/c"
-        android:layout_marginLeft="29dp"
-        android:layout_marginStart="29dp"
-        android:layout_toEndOf="@+id/c"
-        android:layout_toRightOf="@+id/c"
-        android:background="#d3d3d3"
-        android:onClick="clickFunction"
-        android:text="D" />
-
-    <Button
-        android:id="@+id/a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/c"
-        android:layout_alignLeft="@+id/c"
-        android:layout_alignStart="@+id/c"
-        android:layout_marginBottom="31dp"
-        android:background="#d3d3d3"
-        android:onClick="clickFunction"
-        android:text="a" />
-
-    <Button
-        android:id="@+id/b"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/c"
-        android:layout_alignBottom="@+id/c"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:layout_toLeftOf="@+id/c"
-        android:layout_toStartOf="@+id/c"
-        android:background="#d3d3d3"
-        android:onClick="clickFunction"
-        android:text="B" />
-
-    <Button
-        android:id="@+id/c"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="101dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="#d3d3d3"
-        android:onClick="clickFunction"
-        android:text="C" />
+        android:padding="5dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:id="@+id/a"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#323232"
+            android:textColor="#fff"
+            android:text="Start"
+            android:layout_margin="5dp"
+            android:onClick="clickFunction"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/a"
+            android:layout_toEndOf="@+id/a"
+            android:id="@+id/b"
+            android:background="#898989"
+            android:textColor="#fff"
+            android:text="Prev"
+            android:onClick="clickFunction"/>
+        <Button
+            android:layout_width="290dp"
+            android:layout_height="140dp"
+            android:id="@+id/c"
+            android:layout_below="@+id/a"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#3498db"
+            android:textColor="#fff"
+            android:text="next"
+            android:layout_margin="5dp"
+            android:onClick="clickFunction"/>
+        <Button
+            android:layout_width="210dp"
+            android:layout_height="70dp"
+            android:id="@+id/d"
+            android:layout_below="@+id/c"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/c"
+            android:layout_alignEnd="@+id/c"
+            android:background="#323232"
+            android:textColor="#fff"
+            android:text="esc"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:onClick="clickFunction"/>
+
+
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -36,22 +36,22 @@ public class Client extends AsyncTask<Object, Object, Void> {
             PrintStream printStream = new PrintStream(outputStream);
             for(;;) {
                 if(global.getData() == 1) {
-                    printStream.print("a!");
+                    printStream.print("s");
                     global.setData(0);
                 }
 
                 if(global.getData() == 2) {
-                    printStream.print("b!");
+                    printStream.print("p");
                     global.setData(0);
                 }
 
                 if(global.getData() == 3) {
-                    printStream.print("c!");
+                    printStream.print("n");
                     global.setData(0);
                 }
 
                 if(global.getData() == 4) {
-                    printStream.print("d!");
+                    printStream.print("e");
                     global.setData(0);
                 }
             }
