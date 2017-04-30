@@ -127,7 +127,7 @@ class Ui_MainWindow(object):
 
         self.host = socket.gethostbyname(socket.gethostname())
         self.txtedit.setText('host')
-        self.port = 5000
+        self.port = 5001
         print("Server's IP Address:"+self.host)
 
         self.mySocket = socket.socket()
