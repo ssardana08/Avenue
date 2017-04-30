@@ -128,29 +128,29 @@ class Ui_MainWindow(object):
 
     def server(self):
 
-        self.host = socket.gethostbyname(socket.gethostname())
+        host = socket.gethostbyname(socket.gethostname())
         #self.txtedit.setText('host')
-        self.port = 5001
-        print("Server's IP Address:"+self.host)
+        port = 5001
+        print("Server's IP Address:"+host)
 
-        self.mySocket = socket.socket()
-        self.mySocket.bind((self.host,self.port))
+        mySocket = socket.socket()
+        mySocket.bind((host,port))
 
-        self.mySocket.listen(1)
-        self.conn, self.addr = self.mySocket.accept()
-        print ("Connection from: " + str(self.addr))
+        mySocket.listen(1)
+        conn, addr = mySocket.accept()
+        print ("Connection from: " + str(addr))
         while True:
-            self.data = conn.recv(1024).decode()
-            if not self.data:
+            data = conn.recv(1024).decode()
+            if not data:
                 break
             print ("from connected  user: " + str(data))
-            if (self.data == 'b!'):
+            if (data == 'b!'):
                 pyag.press('left')
-            elif (self.data == 'd!'):
+            elif (data == 'd!'):
                 pyag.press('right')
-            elif (self.data == 'a!'):
+            elif (data == 'a!'):
                 pyag.hotkey('shift','f5')
-            elif (self.data == 'c!'):
+            elif (data == 'c!'):
                 pyag.press('esc')
 
 
