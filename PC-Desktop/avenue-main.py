@@ -69,6 +69,9 @@ class Ui_MainWindow(object):
         # TextEdit Column
         self.txtedit = QtGui.QLineEdit(self.centralwidget)
         self.txtedit.setObjectName(_fromUtf8("txtedit"))
+
+        self.txtedit.setText(socket.gethostbyname(socket.gethostname()))
+
         self.gridLayout_4.addWidget(self.txtedit, 0, 1, 1, 1, QtCore.Qt.AlignLeft)
         self.gridLayout.addLayout(self.gridLayout_4, 1, 0, 1, 1)
         self.label = QtGui.QLabel(self.centralwidget)
@@ -126,7 +129,7 @@ class Ui_MainWindow(object):
     def server(self):
 
         self.host = socket.gethostbyname(socket.gethostname())
-        self.txtedit.setText('host')
+        #self.txtedit.setText('host')
         self.port = 5001
         print("Server's IP Address:"+self.host)
 
