@@ -1,4 +1,5 @@
-import socket 
+import socket
+import pyautogui as pyag
 def server():
 	
     host = socket.gethostbyname(socket.gethostname())
@@ -15,6 +16,14 @@ def server():
             if not data:
                     break
             print ("from connected  user: " + str(data))
+            if (data == 'b!'):
+                pyag.press('left')
+            elif (data == 'd!'):
+                pyag.press('right')
+            elif (data == 'a!'):
+                pyag.hotkey('shift','f5')
+            elif (data == 'c!'):
+                pyag.press('esc')
              
        
             
