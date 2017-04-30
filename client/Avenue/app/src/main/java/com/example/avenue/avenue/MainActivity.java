@@ -26,8 +26,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String ip = getIntent().getStringExtra("ip");
         global.setData(0);
-        Client client = new Client("192.168.43.84",5000,"BC");
+        Client client = new Client(ip,5001,"BC");
         client.execute();
         Toast.makeText(MainActivity.this, "Client Started", Toast.LENGTH_LONG).show();
     }
